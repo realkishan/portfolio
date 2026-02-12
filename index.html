@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Kishan Lalji Gupta | Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+:root{
+  --bg:#0f2027;
+  --card:rgba(255,255,255,0.1);
+  --text:#ffffff;
+  --accent:#00eaff;
+}
+#toggle:checked ~ .site{
+  --bg:#f5f7fa;
+  --card:#ffffff;
+  --text:#000000;
+  --accent:#0066ff;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--text);}
+
+.site{transition:0.4s}
+
+/* NAVBAR */
+nav{
+  position:sticky;
+  top:0;
+  background:rgba(0,0,0,0.7);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 30px;
+  z-index:10;
+}
+nav a{
+  color:white;
+  text-decoration:none;
+  margin:0 10px;
+  font-weight:500;
+}
+nav a:hover{color:var(--accent);}
+.toggle-btn{
+  cursor:pointer;
+  background:var(--accent);
+  padding:6px 12px;
+  border-radius:20px;
+  color:black;
+  font-size:14px;
+}
+
+/* HERO */
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:50px;
+  flex-wrap:wrap;
+  padding:40px;
+}
+.hero img{
+  width:230px;
+  height:230px;
+  border-radius:50%;
+  border:6px solid var(--accent);
+  box-shadow:0 0 40px var(--accent);
+  animation:float 3s infinite;
+}
+@keyframes float{
+  50%{transform:translateY(-15px);}
+}
+.hero h1{font-size:42px;color:var(--accent);}
+.hero p{margin-top:10px;font-style:italic;font-size:17px;}
+.hero .social-icons{
+  margin-top:15px;
+}
+.hero .social-icons a i{
+  font-size:28px;
+  margin-right:15px;
+  color:var(--accent);
+  transition:0.3s;
+}
+.hero .social-icons a i:hover{
+  transform:scale(1.2);
+  color:white;
+}
+
+/* SECTION */
+section{padding:80px 20px;text-align:center;}
+section h2{font-size:34px;color:var(--accent);margin-bottom:40px;}
+
+.container{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:25px;
+}
+.card{
+  width:280px;
+  padding:25px;
+  background:var(--card);
+  border-radius:20px;
+  transition:0.4s;
+}
+.card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 0 25px var(--accent);
+}
+
+/* LIST */
+.list{
+  max-width:900px;
+  margin:auto;
+  text-align:left;
+}
+.list li{margin:10px 0;line-height:1.6}
+
+/* FORM */
+form{
+  max-width:500px;
+  margin:auto;
+}
+form input,form textarea{
+  width:100%;
+  padding:12px;
+  margin:10px 0;
+  border:none;
+  border-radius:8px;
+}
+form button{
+  padding:12px 25px;
+  background:var(--accent);
+  border:none;
+  border-radius:25px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+/* FOOTER */
+footer{
+  padding:20px;
+  background:rgba(0,0,0,0.4);
+  text-align:center;
+}
+footer a i{
+  font-size:26px;
+  margin-top:10px;
+  color:var(--accent);
+  transition:0.3s;
+}
+footer a i:hover{
+  transform:scale(1.2);
+  color:white;
+}
+</style>
+</head>
+
+<body>
+
+<input type="checkbox" id="toggle" hidden>
+<div class="site">
+
+<nav>
+  <div><b>Kishan</b></div>
+  <div>
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
+    <label for="toggle" class="toggle-btn">🌙 / ☀️</label>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <img src="image13.png">
+  <div>
+    <h1>Kishan Lalji Gupta</h1>
+    <h3>Undergraduate BSc Computer Science Student</h3>
+
+    <!-- UNIQUE TAGLINE ADDED -->
+    <p>Developer by passion • Fitness lover • Traveller • Always learning</p>
+
+    <!-- INSTAGRAM ICON ADDED -->
+    <div class="social-icons">
+      <a href="https://www.instagram.com/kishan_gupta" target="_blank">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+<h2>About Me</h2>
+<p style="max-width:800px;margin:auto;line-height:1.8">
+I’m a second-year BSc Computer Science student passionate about web development, problem-solving, and tracking my personal growth. I enjoy playing cricket, improving my chess strategies, staying active at the gym, and travelling to explore new places. I love working on real-world projects using modern technologies and continuously learning new skills.
+</p>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+<h2>Education</h2>
+<div class="container">
+  <div class="card">
+    <p> SSC:- 66.80% </p>
+    <p> HSC:- 62.83% </p>
+    <h3>Undergraduate in Computer Science</h3>
+    <p>Bhavan’s College</p>
+    <p>SY BSc CS – Semester IV</p>
+  </div>
+</div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+<h2>Skills</h2>
+<div class="container">
+  <div class="card">HTML & CSS</div>
+  <div class="card">Java & Python</div>
+  <div class="card">C++ & SQL</div>
+  <div class="card">Linux</div>
+  <div class="card">VS Code, Git</div>
+  <div class="card">Excel, Word, PPT</div>
+  <div class="card">Video Editing (VN)</div>
+</div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+<h2>Projects</h2>
+<ul class="list">
+  <li><b>River Cleaning Boat (IoT)</b> – Developed a prototype boat equipped with sensors to automate river cleaning tasks.</li>
+  <li><b>Online Course Enrollment System</b> – Implemented a Java/NetBeans application supporting user registration and data management.</li>
+  <li><b>Smart Bag Website</b> – Created an informational website using HTML to showcase features of a smart bag concept.</li>
+  <li><b>Store Website</b> – Built a simple HTML/CSS store interface with essential UI components</li>
+  <li><b>DBMS in Finance Industry</b> – Designed a database schema and queries for Aditya Birla Finance Ltd. to handle finance operations.</li>
+</ul>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+<h2>Experience & Activities</h2>
+<ul class="list">
+  <li><b>Internship </b>– ZYNOXIS SOLUTION LLP ALL YOUR IT NEEDS ENDS HERE</li>
+  <li><b>Volunteer </b> – Abhyudaya NGO (SPIT Campus, 4 Semesters)  
+      Supported various NGO activities and assisted students through mentoring, guidance, and academic help.</li>
+  <li><b>Telecaller – AVA Lifespace LLP (Borivali East) & Shivani Rudra Project (Kandivali West)</b>  
+      Managed real estate client communication, generated leads, and provided project information to interested buyers. (4 months, 2025)</li>
+</ul>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+<h2>Contact Me</h2>
+<p>Email: kishan@gmail.com</p>
+<p>Phone: 865718****</p>
+<p>Mumbai, India</p>
+
+<form>
+  <input type="text" placeholder="Your Name">
+  <input type="email" placeholder="Your Email">
+  <textarea rows="4" placeholder="Message"></textarea>
+  <button>Send Message</button>
+</form>
+</section>
+
+<footer>
+© 2026 Kishan Lalji Gupta | All Rights Reserved  
+<br><br>
+
+<!-- INSTAGRAM ICON IN FOOTER -->
+<a href="https://www.instagram.com/kishan_gupta" target="_blank">
+  <i class="fa-brands fa-instagram"></i>
+</a>
+
+</footer>
+
+</div>
+</body>
+</html>
